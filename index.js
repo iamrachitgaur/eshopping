@@ -10,7 +10,7 @@ app.use(express.json())
 app.use('/userApi',userRouter)
 app.use('/productApi',productRouter)
 app.get('/*', (req, res) =>
-    res.send('<h1>hello here big!!</h1>')
+    res.sendFile('./dist/eshopping/index.html')
 );
 
 // Start the app by listening on the default Heroku port
