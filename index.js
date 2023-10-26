@@ -5,7 +5,7 @@ const port = process.env.PORT || 4200;
 const userRouter = require('./routes/userRouter')
 const productRouter = require('./routes/productRouter')
 
-app.use(express.static('./dist/eshopping'));
+app.use(express.static('./dist/eshopping/'));
 app.use(express.json())
 app.use('/userApi',userRouter)
 app.use('/productApi',productRouter)
