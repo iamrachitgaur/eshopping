@@ -10,7 +10,7 @@ app.use(express.json())
 app.use('/userApi',userRouter)
 app.use('/productApi',productRouter)
 app.get('/*', (req, res) =>
-    res.send("hello world!!")
+    res.send(process.env.JWT_SECRET)
 );
 
 // Start the app by listening on the default Heroku port
