@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
-// const connectionURL = process.env.MONGODB_URL;
-const connectionURL = "mongodb+srv://angularDatabase:angularDatabase@angulardatabase.vcicwrb.mongodb.net/eshopping?retryWrites=true&w=majority"
+const connectionURL = process.env.MONGODB_URL;
 const database = mongoose.connect(connectionURL,{useNewUrlParser:true},(error)=>{
     if(error){
        return console.log(error)
