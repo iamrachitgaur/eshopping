@@ -5,12 +5,12 @@ const port = process.env.PORT || 4200;
 const userRouter = require('./routes/userRouter')
 const productRouter = require('./routes/productRouter')
 
-app.use(express.static('./'));
+app.use(express.static(`${__dirname}/dist/eshopping/`));
 app.use(express.json())
 app.use('/userApi',userRouter)
 app.use('/productApi',productRouter)
 app.get('/*', (req, res) =>
-    res.sendFile('./index.html')
+    res.sendFile(`${__dirname}/dist/eshopping/index.html`)
 );
 
 // Start the app by listening on the default Heroku port
